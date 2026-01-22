@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Crosshair, Layers, Wrench, Settings, Box, FileCheck } from "lucide-react";
+import servicesBg from "@/assets/services-bg.jpg";
 
 const services = [
   {
@@ -47,8 +48,15 @@ const Services = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="servicos" className="section-padding section-dark" ref={ref}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="servicos" className="relative section-padding overflow-hidden" ref={ref}>
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${servicesBg})` }}
+      >
+        <div className="absolute inset-0 bg-dark/90" />
+      </div>
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

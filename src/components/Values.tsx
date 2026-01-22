@@ -11,6 +11,7 @@ import {
   Shield,
   TrendingUp,
 } from "lucide-react";
+import valuesBg from "@/assets/values-bg.jpg";
 
 const values = [
   {
@@ -56,8 +57,15 @@ const Values = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="valores" className="section-padding bg-background" ref={ref}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="valores" className="relative section-padding overflow-hidden" ref={ref}>
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${valuesBg})` }}
+      >
+        <div className="absolute inset-0 bg-background/95" />
+      </div>
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mission & Vision */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 md:mb-20">
           <motion.div
