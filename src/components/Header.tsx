@@ -54,9 +54,11 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between py-4">
           <a href="#inicio" className="flex items-center">
-            <span className="font-display text-2xl md:text-3xl font-bold text-white">
-              <span className="text-primary">BRISTAR</span> LASER
-            </span>
+            <img 
+              src="/Captura_de_tela_de_2026-01-22_15-23-10-removebg-preview.png" 
+              alt="Bristar Laser - Logo" 
+              className="h-10 md:h-12 w-auto"
+            />
           </a>
 
           {/* Desktop navigation */}
