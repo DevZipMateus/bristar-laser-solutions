@@ -52,18 +52,18 @@ const Header = () => {
       </div>
 
       {/* Main nav */}
-      <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between py-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="flex items-center justify-between py-3 sm:py-4">
           <a href="#inicio" className="flex items-center">
             <img 
               src="/Captura_de_tela_de_2026-01-22_15-23-10-removebg-preview.png" 
               alt="Bristar Laser - Logo" 
-              className="h-10 md:h-12 w-auto"
+              className="h-8 sm:h-10 md:h-12 w-auto"
             />
           </a>
 
           {/* Desktop navigation */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-4 xl:gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -79,7 +79,7 @@ const Header = () => {
           {/* CTA Button */}
           <a
             href="https://wa.me/5519989233223"
-            className="hidden md:inline-flex btn-primary px-6 py-3 rounded-md font-display uppercase text-sm tracking-wider"
+            className="hidden lg:inline-flex btn-primary px-4 xl:px-6 py-2.5 xl:py-3 rounded-md font-display uppercase text-xs xl:text-sm tracking-wider"
           >
             Solicitar orçamento
           </a>
@@ -87,7 +87,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2"
+            className="lg:hidden text-white p-2"
             aria-label="Menu"
           >
             {isMobileMenuOpen ? (
@@ -106,21 +106,21 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-dark/95 backdrop-blur-md"
+            className="lg:hidden bg-dark/95 backdrop-blur-md"
           >
-            <ul className="container mx-auto px-4 py-4 flex flex-col gap-4">
+            <ul className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-3 sm:gap-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block font-display text-lg uppercase tracking-wider text-white/80 hover:text-primary transition-colors py-2"
+                    className="block font-display text-base sm:text-lg uppercase tracking-wider text-white/80 hover:text-primary transition-colors py-2"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
-              <li className="pt-4 border-t border-white/10">
+              <li className="pt-3 sm:pt-4 border-t border-white/10">
                 <a
                   href="https://wa.me/5519989233223"
                   className="inline-flex btn-primary px-6 py-3 rounded-md font-display uppercase text-sm tracking-wider w-full justify-center"

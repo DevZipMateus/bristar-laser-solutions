@@ -139,18 +139,18 @@ const Gallery = () => {
 
   return (
     <section id="galeria" className="section-padding bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-10 md:mb-12"
         >
-          <h2 className="section-title text-foreground mb-4">
+          <h2 className="section-title text-foreground mb-3 sm:mb-4">
             Nossa <span className="text-primary">Galeria</span>
           </h2>
-          <p className="section-subtitle mx-auto">
+          <p className="section-subtitle mx-auto px-2">
             Conheça nossos trabalhos e processos de corte a laser de alta precisão.
           </p>
         </motion.div>
@@ -170,11 +170,11 @@ const Gallery = () => {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-2 sm:-ml-3 md:-ml-4">
               {mediaItems.map((media, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+                  className="pl-2 sm:pl-3 md:pl-4 basis-4/5 sm:basis-1/2 lg:basis-1/3"
                 >
                   <Card
                     className="cursor-pointer overflow-hidden border-border hover:border-primary transition-colors"
@@ -210,8 +210,8 @@ const Gallery = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12" />
-            <CarouselNext className="hidden md:flex -right-12" />
+            <CarouselPrevious className="hidden sm:flex -left-4 sm:-left-6 md:-left-10 lg:-left-12" />
+            <CarouselNext className="hidden sm:flex -right-4 sm:-right-6 md:-right-10 lg:-right-12" />
           </Carousel>
 
           {/* Indicadores */}
@@ -255,10 +255,10 @@ const Gallery = () => {
                 e.stopPropagation();
                 navigateExpanded("prev");
               }}
-              className="absolute left-4 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="absolute left-2 sm:left-4 z-10 p-2 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
               aria-label="Anterior"
             >
-              <ChevronLeft className="w-8 h-8 text-white" />
+              <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
             </button>
 
             {/* Mídia Expandida */}
@@ -293,10 +293,10 @@ const Gallery = () => {
                 e.stopPropagation();
                 navigateExpanded("next");
               }}
-              className="absolute right-4 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="absolute right-2 sm:right-4 z-10 p-2 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
               aria-label="Próximo"
             >
-              <ChevronRight className="w-8 h-8 text-white" />
+              <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
             </button>
 
             {/* Contador */}

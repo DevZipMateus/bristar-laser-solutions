@@ -9,33 +9,33 @@ const About = () => {
 
   return (
     <section id="sobre" className="section-padding bg-secondary" ref={ref}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="section-title text-foreground mb-4">
+          <h2 className="section-title text-foreground mb-3 sm:mb-4">
             Sobre a <span className="text-primary">Bristar Laser</span>
           </h2>
-          <p className="section-subtitle mx-auto">
+          <p className="section-subtitle mx-auto px-2">
             Desde 2017, somos especialistas em soluções a laser de alta precisão
             para o setor de facarias.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           {/* História */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="font-display text-2xl font-semibold text-foreground mb-6">
+            <h3 className="font-display text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
               Nossa história
             </h3>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
               <p>
                 Fundada em 2017, a Bristar Laser é uma empresa especializada em
                 soluções a laser de alta precisão, atuando com foco em
@@ -65,30 +65,30 @@ const About = () => {
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+            className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6"
           >
-            <div className="bg-card p-8 rounded-lg border border-border text-center card-hover">
-              <Building2 className="w-12 h-12 text-primary mx-auto mb-4" />
-              <div className="font-display text-4xl font-bold text-primary mb-2">
+            <div className="bg-card p-4 sm:p-6 md:p-8 rounded-lg border border-border text-center card-hover">
+              <Building2 className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mx-auto mb-2 sm:mb-4" />
+              <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1 sm:mb-2">
                 2017
               </div>
-              <p className="text-muted-foreground text-sm">Ano de fundação</p>
+              <p className="text-muted-foreground text-xs sm:text-sm">Ano de fundação</p>
             </div>
 
-            <div className="bg-card p-8 rounded-lg border border-border text-center card-hover">
-              <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-              <div className="font-display text-4xl font-bold text-primary mb-2">
+            <div className="bg-card p-4 sm:p-6 md:p-8 rounded-lg border border-border text-center card-hover">
+              <Users className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mx-auto mb-2 sm:mb-4" />
+              <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1 sm:mb-2">
                 100+
               </div>
-              <p className="text-muted-foreground text-sm">Clientes atendidos</p>
+              <p className="text-muted-foreground text-xs sm:text-sm">Clientes atendidos</p>
             </div>
 
-            <div className="bg-card p-8 rounded-lg border border-border text-center card-hover">
-              <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
-              <div className="font-display text-4xl font-bold text-primary mb-2">
+            <div className="bg-card p-4 sm:p-6 md:p-8 rounded-lg border border-border text-center card-hover">
+              <TrendingUp className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mx-auto mb-2 sm:mb-4" />
+              <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1 sm:mb-2">
                 1000+
               </div>
-              <p className="text-muted-foreground text-sm">Projetos entregues</p>
+              <p className="text-muted-foreground text-xs sm:text-sm">Projetos entregues</p>
             </div>
           </motion.div>
         </div>
@@ -98,12 +98,12 @@ const About = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 bg-card p-8 md:p-12 rounded-2xl border border-border"
+          className="mt-10 sm:mt-12 md:mt-16 bg-card p-6 sm:p-8 md:p-10 lg:p-12 rounded-xl sm:rounded-2xl border border-border"
         >
-          <h3 className="font-display text-2xl font-semibold text-foreground mb-6">
+          <h3 className="font-display text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
             Mercado de atuação
           </h3>
-          <div className="text-muted-foreground leading-relaxed space-y-4">
+          <div className="text-muted-foreground leading-relaxed space-y-3 sm:space-y-4 text-sm sm:text-base">
             <p>
               A Bristar Laser atua no mercado industrial metalmecânico, com
               especialização no corte a laser de matrizes para facarias. A
