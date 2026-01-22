@@ -15,7 +15,7 @@ const Index = () => {
   const [showSelector, setShowSelector] = useState(true);
 
   // URL do site externo - substituir quando o link for fornecido
-  const externalSiteUrl = "https://bristarlaser.com.br/contato/";
+  const externalSiteUrl = "https://bristarlaser.com.br/";
 
   const handleSelectCurrent = () => {
     setShowSelector(false);
