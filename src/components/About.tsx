@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Building2, Users, TrendingUp } from "lucide-react";
+import aboutImage from "@/assets/about-image.jpg";
 
 const About = () => {
   const ref = useRef(null);
@@ -58,6 +59,20 @@ const About = () => {
                 atendimento próximo e profissional.
               </p>
             </div>
+            
+            {/* Imagem decorativa */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-6 sm:mt-8 rounded-xl overflow-hidden shadow-lg"
+            >
+              <img
+                src={aboutImage}
+                alt="Ferramentas e matrizes de precisão"
+                className="w-full h-48 sm:h-56 md:h-64 object-cover"
+              />
+            </motion.div>
           </motion.div>
 
           {/* Stats */}

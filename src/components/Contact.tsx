@@ -2,14 +2,22 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import laserBg from "@/assets/laser-cutting-bg.jpg";
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contato" className="section-padding section-accent" ref={ref}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contato" className="relative section-padding overflow-hidden" ref={ref}>
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${laserBg})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-background/98 via-background/95 to-primary/10" />
+      </div>
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
