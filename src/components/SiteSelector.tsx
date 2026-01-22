@@ -49,7 +49,7 @@ const SiteSelector = ({ onSelectCurrent, externalSiteUrl }: SiteSelectorProps) =
           transition={{ delay: 0.4, duration: 0.6 }}
           className="font-display text-2xl md:text-4xl font-bold text-white mb-4"
         >
-          Bem-vindo à <span className="text-primary">Bristar Laser</span>
+          Bem-vindo à <span className="text-primary">Bristar Matrizes</span>
         </motion.h1>
 
         <motion.p
@@ -75,7 +75,7 @@ const SiteSelector = ({ onSelectCurrent, externalSiteUrl }: SiteSelectorProps) =
           >
             <div className="relative rounded-xl bg-primary px-8 py-5 transition-all duration-300 group-hover:bg-primary/90">
               <span className="font-display text-lg font-semibold text-primary-foreground uppercase tracking-wider">
-                Bristar Laser
+                Bristar Matrizes
               </span>
               <p className="text-primary-foreground/80 text-sm mt-1">
                 Site institucional
@@ -93,10 +93,10 @@ const SiteSelector = ({ onSelectCurrent, externalSiteUrl }: SiteSelectorProps) =
           >
             <div className="relative rounded-xl bg-transparent px-8 py-5 transition-all duration-300 group-hover:bg-white/5">
               <span className="font-display text-lg font-semibold text-white uppercase tracking-wider">
-                Outro site
+                Bristar Laser
               </span>
               <p className="text-white/60 text-sm mt-1">
-                Acesse outro portal
+                Acesse o site Bristar Laser
               </p>
             </div>
           </button>
